@@ -1,0 +1,16 @@
+---
+declared-services:
+  # Visual Recognition
+  Visual Recognition-Demo:
+    label: watson_vision_combined
+    plan: free
+applications:
+  # Application name
+- name: xxxxxxxxxxxxxxx
+  path: .
+  command: npm start
+  memory: 512M
+  services:
+  - Visual Recognition-Demo
+  env:
+    NODE_ENV: production
